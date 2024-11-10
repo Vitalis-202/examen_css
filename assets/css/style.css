@@ -59,6 +59,16 @@ body {
     display: none;
 }
 
+.nav__hamburger ul > li > a{
+    color: white;
+    text-decoration: none;
+}
+
+.nav__hamburger ul > li > a:hover{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
 .filter {
     grid-area: filter;
     background-color: #3e51c9;
@@ -108,12 +118,20 @@ body {
     gap:10px;
     padding-bottom:10px;
     margin-bottom: 10px;
+    transition: all 0.3s ease;
+    filter: grayscale(100%);
+}
+
+.card:hover {
+    transform: scale(1.1);
+    filter: grayscale(0%);
     
 }
 
 .card img {
     width: 300px;
     height: 350px;
+    transition: all 0.3s ease;
 }
 
 .card p {
@@ -222,15 +240,6 @@ body {
         gap:10px;
         padding-right: 5px;
     }
-    .nav__hamburger ul > li > a{
-        color: white;
-        text-decoration: none;
-    }
-
-    .nav__hamburger ul > li > a:hover{
-        font-size: 1.5rem;
-        font-weight: 700;
-    }
 
     .nav__hamburger i{
         display: none;
@@ -301,4 +310,26 @@ body {
         height: 250px;
     }
 
+}
+
+/* Rotación del logo */
+.rotate {
+    animation: rotacion4t 4s infinite;
+}
+@keyframes rotacion4t {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(90deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(270deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
